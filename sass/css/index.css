@@ -1,0 +1,131 @@
+body {
+  font-size: 75%;
+}
+
+#top-nav {
+  line-height: 28px;
+  height: 28px;
+  background: #f2f2f2;
+  color: #666;
+}
+#top-nav .top-nav-left {
+  float: left;
+}
+#top-nav .top-nav-left a {
+  display: inline-block;
+  margin: 0 5px;
+}
+#top-nav .top-nav-left #login {
+  margin-left: 30px;
+}
+#top-nav .top-nav-left #register {
+  color: #ff6600;
+}
+#top-nav .top-nav-right {
+  float: right;
+  width: 450px;
+  height: 28px;
+}
+#top-nav .top-nav-right > ul {
+  height: 28px;
+}
+#top-nav .top-nav-right > ul > li {
+  float: left;
+  position: relative;
+}
+#top-nav .top-nav-right > ul > li a {
+  padding: 0 5px;
+  display: block;
+}
+#top-nav .top-nav-right > ul > li:hover > a {
+  color: #ff6600;
+  background: white;
+}
+#top-nav .top-nav-right > ul > li:hover ul {
+  display: block;
+}
+#top-nav .top-nav-right > ul > li:hover ul :hover {
+  color: #ff6600;
+}
+#top-nav .top-nav-right > ul > li > ul {
+  width: 110px;
+  display: none;
+  border: 1px solid #cccccc;
+  border-top: none;
+  position: absolute;
+  background: white;
+  z-index: 5;
+}
+
+#header {
+  height: 150px;
+}
+#header .banner {
+  height: 100%;
+  background: url(../../images/banner.jpg) no-repeat center center;
+  background-size: 100%;
+}
+#header .banner #search {
+  height: 50px;
+  width: 680px;
+  position: relative;
+  top: 50px;
+  left: 260px;
+  background: #ff6600;
+  border-radius: 5px;
+}
+#header .banner #search form {
+  height: 100%;
+}
+#header .banner #search i {
+  position: absolute;
+  font-size: 30px;
+  left: 8px;
+  top: 10px;
+  color: #ccc;
+}
+#header .banner #search input {
+  border: 2px solid #ff6600;
+  border-radius: 5px;
+  width: 595px;
+  height: 50px;
+  float: left;
+  color: #ccc;
+  padding-left: 40px;
+}
+#header .banner #search #clickSearch {
+  width: 80px;
+  height: 50px;
+  float: left;
+  background: #ff6600;
+  text-align: center;
+  line-height: 50px;
+  font-size: 14px;
+  color: white;
+  position: absolute;
+}
+#header .banner #search #hotSearch {
+  width: 600px;
+  height: 18px;
+  padding-top: 10px;
+}
+#header .banner #search #hotSearch li {
+  float: left;
+  margin: 0 5px;
+  color: #ff6600;
+}
+#header .banner #search #hotSearch li a {
+  color: #ff6600;
+}
+#header .banner button {
+  float: right;
+  height: 40px;
+  width: 155px;
+}
+#header .banner button i {
+  float: left;
+  color: #ff6600;
+  padding-left: 20px;
+}
+
+/*# sourceMappingURL=index.css.map */

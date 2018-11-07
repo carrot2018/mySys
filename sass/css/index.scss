@@ -1,0 +1,138 @@
+
+body {
+    font-size: 75%;
+}
+// 顶部导航
+#top-nav {
+    line-height: 28px;
+    height: 28px;
+    background: #f2f2f2;
+    color: #666;
+    .top-nav-left{
+        float: left;
+        a{
+            display: inline-block;
+            margin: 0 5px;
+        }
+        #login{
+            margin-left: 30px;
+        }
+        #register{
+            color: #ff6600;
+        }
+    }
+    .top-nav-right{
+        float: right;
+        width: 450px;
+        height: 28px;
+        &>ul{
+            height: 28px;
+            
+            &>li{
+                float: left;  
+                position: relative;
+                a{ 
+                    padding: 0 5px;                  
+                    display: block; 
+                    
+                }
+                &:hover{
+                    &>a{ color: #ff6600;
+                    background: white;}
+                    ul{
+                        display:block;
+                        :hover{
+                            color: #ff6600
+                        }
+                    } 
+                }
+                &>ul{ 
+                    width: 110px;
+                    display:none;
+                    border: 1px solid #cccccc;
+                    border-top: none;
+                    position: absolute; 
+                    background: white;
+                    z-index: 5;
+                }
+            }
+        }
+    }
+}
+// 头部信息栏
+#header{
+    height: 150px;
+   .banner{
+       height: 100%;
+       background: url(../../images/banner.jpg) no-repeat center center;
+       background-size: 100%;
+       #search{
+           height: 50px;
+           width: 680px;
+           position: relative;
+           top: 50px;
+           left: 260px;
+           background:#ff6600;
+           border-radius: 5px;
+            form{
+                height: 100%;
+            }
+           i{
+            position: absolute;
+            font-size: 30px;
+            left: 8px;
+            top: 10px;
+            color: #ccc;
+           }
+           input{
+            border:2px solid #ff6600;
+            border-radius: 5px;
+               width:595px;
+               height: 50px;
+               float: left;
+               color: #ccc;
+               padding-left: 40px;
+           }
+           #clickSearch{
+            width: 80px;
+            height: 50px;
+            float: left;
+            background: #ff6600;
+            text-align: center;
+            line-height: 50px;
+            font-size: 14px;
+            color: white;
+            position: absolute;
+           }
+        //热门搜索
+           #hotSearch{
+            width: 600px;
+            height: 18px;
+            padding-top:10px;
+            
+                li{
+                    float: left;
+                    margin: 0 5px;
+                    color: #ff6600;
+                a{
+                    color: #ff6600;
+                }
+                }
+            }
+            
+    } 
+    //购物车
+    button{
+        float: right;
+        height: 40px;
+        width: 155px;
+        i{
+            float: left;
+            color: #ff6600;
+            padding-left: 20px;
+        }
+    } 
+   }
+}
+
+

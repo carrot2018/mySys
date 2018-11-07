@@ -1,0 +1,63 @@
+/* 顶部导航 */
+
+body {
+    font-size: 75%;
+}
+
+#top-nav {
+    line-height: 28px;
+    height: 28px;
+    background: #f2f2f2;
+    color: #666;
+}
+
+#top-nav .top-nav-left {
+    float: left;
+}
+
+.top-nav-left a {
+    display: inline-block;
+    margin: 0 5px;
+}
+
+.top-nav-left a:nth-child(2) {
+    margin-left: 30px;
+}
+
+.top-nav-left a:nth-child(3) {
+    color: #ff6600;
+}
+
+.top-nav-right {
+    width: 430px;
+    float: right;
+}
+
+/* .top-nav-right ul {
+    float: left;
+} */
+
+.top-nav-right ul li {
+    float: left;
+}
+
+.top-nav-right ul li a {
+    float: left;
+    display: inline-block;
+    color: #666666;
+}
+
+.top-nav-right ul li:nth-of-type(2) span {
+    float: left;
+    width: 0;
+    border: 5px solid #666666;
+    border-color: #666 transparent transparent transparent;
+    padding-top: 10px;
+}
+
+/* .myOrder, .myAnitoys, .followUs>span {
+    float: left;
+    width: 0;
+    border: 3px solid #666666;
+    border-color: #666 transparent transparent transparent;
+} */

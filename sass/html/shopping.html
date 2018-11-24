@@ -1,0 +1,1097 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="../css/base.css">
+    <link rel="stylesheet" href="../../iconfont/iconfont.css">
+    <link rel="stylesheet" href="../css/shopping.css">
+    <style>
+        .title {
+            width: 1200px;
+            height: 80px;
+            line-height: 80px;
+        }
+
+        .title li {
+            float: left;
+            margin-right: 20px;
+        }
+
+        .title li img {
+            height: 60px;
+            width: 60px;
+            margin-right: 450px;
+        }
+
+        .goodCount {
+            margin-right: 144px;
+            font-size: 14px;
+            font-weight: 600;
+        }
+
+        .goodPrice {
+            margin-right: 144px;
+            font-size: 14px;
+            font-weight: 600;
+            color: brown;
+        }
+
+        .del,
+        .add {
+            height: 30px;
+            width: 30px;
+            border-radius: 4px;
+            background: #cccccc;
+            font-size: 14px;
+            font-weight: 600;
+        }
+
+        .goodTotalPrice {
+            font-size: 14px;
+            font-weight: 600;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="top-nav">
+        <div class="container">
+            <div class="top-nav-left">
+
+                <a class="welcome" href="../index.html">欢迎来到aniToys</a>
+
+                <a id="login" href="login.html">请登录</a>
+
+                <a id="register" href="register.html">免费注册</a>
+
+            </div>
+            <div class="top-nav-right">
+                <ul>
+                    <li>
+                        <a href="">站内信</a>
+                    </li>
+                    <li class="myOrder">
+                        <a href="">我的订单
+                            <i class="iconfont icon-xiaosanjiaodown"></i>
+                        </a>
+                        <ul>
+                            <li>
+                                <a href="">代补款订单</a>
+                            </li>
+                            <li>
+                                <a href="">已发货订单</a>
+                            </li>
+                            <li>
+                                <a href="">售后订单</a>
+                            </li>
+                            <li>
+                                <a href="">历史订单</a>
+                            </li>
+                        </ul>
+
+                    </li>
+                    <li class="myAnitoys">
+                        <a href="">我的aniToys
+                            <i class="iconfont icon-xiaosanjiaodown"></i>
+                        </a>
+                        <ul>
+                            <li>
+                                <a href="">代补款订单</a>
+                            </li>
+                            <li>
+                                <a href="">已发货订单</a>
+                            </li>
+                            <li>
+                                <a href="">售后订单</a>
+                            </li>
+                            <li>
+                                <a href="">历史订单</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="">联系客服</a>
+                    </li>
+                    <li>
+                        <a href="">旧版补款入口</a>
+                    </li>
+                    <li class="followUs">
+                        <a href="">关注我们
+                            <i class="iconfont icon-xiaosanjiaodown"></i>
+                        </a>
+                        <ul>
+                            <li>
+                                <a href="">代补款订单</a>
+                            </li>
+                            <li>
+                                <a href="">已发货订单</a>
+                            </li>
+                            <li>
+                                <a href="">售后订单</a>
+                            </li>
+                            <li>
+                                <a href="">历史订单</a>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <!-- 头部信息栏 -->
+    <div id="header">
+        <div class="container">
+            <div class="banner">
+                <div id="search">
+                    <form action="" method="post">
+                        <i class="iconfont icon-magnifier"></i>
+                        <input type="text" name="" id="" placeholder="请输入关键字">
+                        <a href=" " id="clickSearch">搜索</a>
+                    </form>
+                    <ul id="hotSearch">
+                        <li>热门搜索：</li>
+                        <li>
+                            <a href="">Fate系列</a>
+                        </li>
+                        <li>
+                            <a href="">守望先锋</a>
+                        </li>
+                        <li>
+                            <a href="">初音未来</a>
+                        </li>
+                        <li>
+                            <a href="">全职高手</a>
+                        </li>
+                        <li>
+                            <a href="">刀剑乱舞</a>
+                        </li>
+                        <li>
+                            <a href="">精灵宝可梦</a>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="shoppingCart">
+                    <i class="iconfont icon-gouwuche"></i>
+                    <a href="shopping.html">去购物车结算</a>
+                    <div class="shopping-num">0</div>
+                </div>
+
+
+            </div>
+        </div>
+    </div>
+    <div id="nav">
+        <div class="container">
+
+            <div class="nav-link-header">
+                <span>
+                    <a class="alltoys" href="">所有周边</a>
+                    <div class="nav-list">
+                        <ul id="navbg">
+                            <li class="navLi">
+                                <div class="navLi-content">
+                                    <a href="">
+                                        <i>|</i>手办/模型/玩偶</a>
+                                </div>
+                                <div class="navLi-list">
+                                    <div class="navLi-list-item">
+                                        <div class="navLi-list-title">手办</div>
+                                        <ul>
+                                            <li>
+                                                <a href="">粘土人</a>
+                                                <i>|</i>
+                                            </li>
+                                            <li>
+                                                <a href="">粘土人</a>
+                                                <i>|</i>
+                                            </li>
+                                            <li>
+                                                <a href="">粘土人</a>
+                                                <i>|</i>
+                                            </li>
+                                            <li>
+                                                <a href="">粘土人</a>
+                                                <i>|</i>
+                                            </li>
+                                            <li>
+                                                <a href="">粘土人</a>
+
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <div class="navLi-list-item">
+                                        <div class="navLi-list-title">手办</div>
+                                        <ul>
+                                            <li>
+                                                <a href="">粘土人</a>
+                                                <i>|</i>
+                                            </li>
+                                            <li>
+                                                <a href="">粘土人</a>
+                                                <i>|</i>
+                                            </li>
+                                            <li>
+                                                <a href="">粘土人</a>
+                                                <i>|</i>
+                                            </li>
+
+                                            <li>
+                                                <a href="">粘土人</a>
+
+                                            </li>
+                                    </div>
+                                    <div class="navLi-list-item">
+                                        <div class="navLi-list-title">手办</div>
+                                        <ul>
+                                            <li>
+                                                <a href="">粘土人</a>
+                                                <i>|</i>
+                                            </li>
+                                            <li>
+                                                <a href="">粘土人</a>
+                                                <i>|</i>
+                                                <li>
+                                                    <a href="">粘土人</a>
+
+                                                </li>
+                                    </div>
+                                </div>
+                                </li>
+                                <li class="navLi">
+                                    <div class="navLi-content">
+
+                                        <a href="">
+                                            <i>|</i>角色周边/文具办公/日用家居
+                                        </a>
+                                    </div>
+                                    <div class="navLi-list">
+                                        <div class="navLi-list-item">
+                                            <div class="navLi-list-title">手办</div>
+                                            <ul>
+                                                <li>
+                                                    <a href="">粘土人</a>
+                                                    <i>|</i>
+                                                </li>
+                                                <li>
+                                                    <a href="">粘土人</a>
+                                                    <i>|</i>
+                                                </li>
+                                                <li>
+                                                    <a href="">粘土人</a>
+                                                    <i>|</i>
+                                                </li>
+                                                <li>
+                                                    <a href="">粘土人</a>
+                                                    <i>|</i>
+                                                </li>
+                                                <li>
+                                                    <a href="">粘土人</a>
+
+                                                </li>
+                                            </ul>
+                                        </div>
+                                        <div class="navLi-list-item">
+                                            <div class="navLi-list-title">手办</div>
+                                            <ul>
+                                                <li>
+                                                    <a href="">粘土人</a>
+                                                    <i>|</i>
+                                                </li>
+                                                <li>
+                                                    <a href="">粘土人</a>
+                                                    <i>|</i>
+                                                </li>
+                                                <li>
+                                                    <a href="">粘土人</a>
+                                                    <i>|</i>
+                                                </li>
+
+                                                <li>
+                                                    <a href="">粘土人</a>
+
+                                                </li>
+                                        </div>
+                                        <div class="navLi-list-item">
+                                            <div class="navLi-list-title">手办</div>
+                                            <ul>
+                                                <li>
+                                                    <a href="">粘土人</a>
+                                                    <i>|</i>
+                                                </li>
+                                                <li>
+                                                    <a href="">粘土人</a>
+                                                    <i>|</i>
+                                                </li>
+                                                <li>
+                                                    <a href="">粘土人</a>
+                                                </li>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li class="navLi">
+                                    <div class="navLi-content">
+
+                                        <a href="">
+                                            <i>|</i>演出票务/官方周边</a>
+                                    </div>
+                                    <div class="navLi-list">
+                                        <div class="navLi-list-item">
+                                            <div class="navLi-list-title">手办</div>
+                                            <ul>
+                                                <li>
+                                                    <a href="">粘土人</a>
+                                                    <i>|</i>
+                                                </li>
+                                                <li>
+                                                    <a href="">粘土人</a>
+                                                    <i>|</i>
+                                                </li>
+                                                <li>
+                                                    <a href="">粘土人</a>
+                                                    <i>|</i>
+                                                </li>
+                                                <li>
+                                                    <a href="">粘土人</a>
+                                                    <i>|</i>
+                                                </li>
+                                                <li>
+                                                    <a href="">粘土人</a>
+
+                                                </li>
+                                            </ul>
+                                        </div>
+                                        <div class="navLi-list-item">
+                                            <div class="navLi-list-title">手办</div>
+                                            <ul>
+                                                <li>
+                                                    <a href="">粘土人</a>
+                                                    <i>|</i>
+                                                </li>
+                                                <li>
+                                                    <a href="">粘土人</a>
+                                                    <i>|</i>
+                                                </li>
+                                                <li>
+                                                    <a href="">粘土人</a>
+                                                    <i>|</i>
+                                                </li>
+
+                                                <li>
+                                                    <a href="">粘土人</a>
+
+                                                </li>
+                                        </div>
+                                        <div class="navLi-list-item">
+                                            <div class="navLi-list-title">手办</div>
+                                            <ul>
+                                                <li>
+                                                    <a href="">粘土人</a>
+                                                    <i>|</i>
+                                                </li>
+                                                <li>
+                                                    <a href="">粘土人</a>
+                                                    <i>|</i>
+                                                </li>
+                                                <li>
+                                                    <a href="">粘土人</a>
+                                                </li>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li class="navLi">
+                                    <div class="navLi-content">
+
+                                        <a href="">
+                                            <i>|</i>其他</a>
+                                    </div>
+                                    <div class="navLi-list">
+                                        <div class="navLi-list-item">
+                                            <div class="navLi-list-title">服务</div>
+                                            <ul>
+                                                <li>费用
+                                                    <i>|</i>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li class="navLi">
+                                    <div class="navLi-content">
+
+                                        <a href="">
+                                            <i>|</i>更多</a>
+                                    </div>
+                                </li>
+                                </ul>
+                    </div>
+                </span>
+            </div>
+            <div class="nav-link-list">
+                <a class="home" href="">首页</a>
+                <a href="">旧版补款入口</a>
+                <a href="">新品预售</a>
+                <a href="">现货</a>
+                <a href="">优惠券</a>
+            </div>
+
+        </div>
+    </div>
+
+    <div id="main">
+        <div class="container">
+            <div class="main-current">
+                <em>您当前的位置</em>
+                <span>>&nbsp;&nbsp;
+                    <a href="#">购物车</a>
+                </span>
+            </div>
+            <div class="main-buy">
+                <form action="" method="post" class="cart-submit-form">
+                    <div class="cart">
+                        <div class="cart-hd cart-table">
+                            <div class="cart-row cart-table-th">
+                                <div class="cart-col col-checkbox">
+                                    <input type="checkbox" class="check-all" name="cart_all">全选
+                                </div>
+                                <div class="cart-col col-name">商品</div>
+                                <div class="cart-col col-other">单价（元）</div>
+                                <div class="cart-col col-other">数量</div>
+                                <div class="cart-col col-other">金额</div>
+                                <div class="cart-col">操作</div>
+                            </div>
+                        </div>
+                        <div class="cart-table">
+                            <table class="item-table">
+                                <colgroup>
+                                    <col class="table-col-1">
+                                    <col class="table-col-2">
+                                    <col class="table-col-3">
+                                    <col class="table-col-4">
+                                    <col class="table-col-5">
+                                    <col class="table-col-6">
+                                    <col class="table-col-7">
+                                </colgroup>
+                                <thead>
+                                    <tr>
+                                        <td colspan="5">
+                                            <input type="checkbox" class="check-shop-all" name="cart_shop[1]">
+                                            <label for="">店铺&nbsp;&nbsp;</label>
+                                            <em>
+                                                <a href="">GoodSmile上海阿尼托官方旗舰店</a>
+                                            </em>&nbsp;&nbsp;
+                                            <a href="" class="btn">领券</a>
+                                        </td>
+                                    </tr>
+                                </thead>
+                                <tbody class="carts">
+
+                                </tbody>
+                            </table>
+                        </div>
+                        <div class="cart-table cart-table-ft">
+                            <div class="cart-table-btm">
+                                <div class="cart-row">
+                                    <div class="cart-col cart-check-all">
+                                        <input type="checkbox" id="deslection">
+                                        <label for="">全选</label>
+                                        <a href="#" class="delete-all">删除</a>
+                                        <!--
+                                        <a href="#">收藏商品</a>
+                                        -->
+                                    </div>
+                                    <div class="cart-col cart-col-right">
+                                        <span>已选商品
+                                            <em id="totalCount">0</em>件</span>
+                                        <span>总计原价（不含运费）：
+                                            <em>0</em>
+                                        </span>
+                                        <span>优惠金额：
+                                            <em>0</em>
+                                        </span>
+                                        <span>合计（不含运费）：
+                                            <em id="totalPrice">0.00</em>
+                                        </span>&nbsp;&nbsp;&nbsp;
+                                        <button type="submit" class="btn btn-import btn-lg submit-cart">
+                                            <span>
+                                                <span>去结算</span>
+                                            </span>
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <div class="OnlineService">
+        <div class="back-to-top">
+            <i class="iconfont icon-uparrowbig"></i>
+            <span>返回顶部</span>
+        </div>
+        <div class="container">
+            <a href="">
+                <img src="../../images/kf.jpg" alt="">
+            </a>
+        </div>
+    </div>
+    <!-- 底部导航 -->
+    <div id="footer-nav">
+        <div class="container">
+            <ul class="footer-nav-list">
+                <li>新手帮助</li>
+                <li>
+                    <a href="">补款流程</a>
+                </li>
+                <li>
+                    <a href="">预售商品购买流程</a>
+                </li>
+                <li>
+                    <a href="">现货购买流程</a>
+                </li>
+                <li>
+                    <a href="">常见问题</a>
+                </li>
+                <li>
+                    <a href="">会员注册协议</a>
+                </li>
+            </ul>
+            <ul class="footer-nav-list">
+                <li>积分优惠券</li>
+                <li>
+                    <a href="">优惠券使用教程与规则</a>
+                </li>
+                <li>
+                    <a href="">会员等级规则</a>
+                </li>
+                <li>
+                    <a href="">积分使用规则</a>
+                </li>
+                <li>
+                    <a href="">积分奖励计划</a>
+                </li>
+            </ul>
+            <ul class="footer-nav-list">
+                <li>售后</li>
+                <li>
+                    <a href="">投诉建议</a>
+                </li>
+                <li>
+                    <a href="">关于预存款充值</a>
+                </li>
+                <li>
+                    <a href="">网站免责声明</a>
+                </li>
+            </ul>
+            <ul class="footer-nav-list">
+                <li>关于我们</li>
+                <li>
+                    <a href="">联系我们</a>
+                </li>
+                <li>
+                    <a href="">网站更新详情</a>
+                </li>
+                <li>
+                    <a href="">公司简介</a>
+                </li>
+                <li>
+                    <a href="">关于172酱与他的小伙伴</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+    <div id="footer">
+        <p>有任何购物问题请联系我们在线客服 | 电话：021-55135395 | 工作时间：周一至周五 09:30－18:00 </p>
+        <p>©2017 阿尼托 上海索罗游信息技术有限公司 anitoys.com 版权所有</p>
+        <p>沪ICP备11047967号-18</p>
+    </div>
+</body>
+
+</html>
+<script src="../../js/jquery.min.js"></script>
+<script>
+    if (window.localStorage.getItem("name")) {
+        $(".welcome").html(window.localStorage.getItem('name'))
+        $("#login").css("display", "none");
+        $("#register").html("注销").attr("href", "../index.html");
+        $("#register").click(function () {
+            localStorage.removeItem("name");
+        });
+    };
+
+    $("#navbg>.navLi").mouseenter(function () {
+        var arr = ["#fdd053", "#e65c00", "#64abea", "#b081d3", "#4bccad"];
+        $(this).css("background", arr[$(this).index()]).siblings().css("background", "#f5f5f5");
+    });
+    $("#navbg>.navLi").mouseleave(function () {
+        $(this).css("background", "#f5f5f5");
+    });
+
+
+    window.onload = function () {
+        var obj = {
+            //获取登录用户名
+            userName: $(".welcome").html(),
+            carts: $(".carts"),//购物车商品信息容器
+            checkAll: $(".check-all"),//全选按钮
+            totalCount: $("#totalCount"),//商品总条数显示框
+            totalPrice: $("#totalPrice"),//商品总价格显示框
+            delCartGoods: $(".delete-all"),//删除购物车商品按钮
+            deslectionBtn: $("#deslection"),//取消选择按钮
+        }
+        //实现购物车功能
+        new ShowCartGoodsInfo(obj);
+        getCartCount();
+
+    }
+    class ShowCartGoodsInfo {
+        constructor(obj) {
+            this.userName = obj.userName;//从哪来？
+            this.carts = obj.carts;//购物车商品信息容器
+            this.checkAll = obj.checkAll;//选择所有
+            this.totalCount = obj.totalCount;//显示所选商品总条数
+            this.totalPrice = obj.totalPrice;//显示所选商品总价格
+            this.delCartGoods = obj.delCartGoods;//删除购物车商品
+            this.deslectionBtn = obj.deslectionBtn;//取消选择按钮
+            this.getCartGoods();//获取购物车保存的商品信息
+            this.getGoods();//获取所有商品信息
+        };
+        getCartGoods() {
+            if (localStorage.getItem(this.userName + "Goods")) {
+                //购物车商品信息存在
+                //获取购物车商品信息
+                var cartGoods = localStorage.getItem(this.userName + "Goods");
+                //将cartGoods转换成json格式的对象
+                var cartGoodsArr = JSON.parse(cartGoods);
+                //添加cartGoodsInfo属性，用于保存所有购物车信息，以数组形式存在。
+                this.cartGoodsInfo = cartGoodsArr;
+            } else {
+                //购物车没有商品信息，将cartGoodsInfo置为null;
+                this.cartGoodsInfo = null;
+            }
+        };
+        getGoods() {
+            var _this = this;
+            //服务器请求所有商品数据。
+
+            $.ajax({
+                type: "post",
+                url: "../php/shopping.php",
+                success: function (res) {
+                    var obj1 = JSON.parse(res);
+                    _this.goods = obj1;
+                    _this.showCartGoodsInfo(obj1);
+                }
+            });
+            //保存商品数据。
+
+            //所有商品拿到后，开始来和购物车保存的信息比较，通过购物车的bid与商品中的bid比较
+            //把对应的商品信息显示在页面。
+
+
+        };
+
+        showCartGoodsInfo(obj1) {//res接收服务器传递过来的所有商品数据
+            //判断是否有购物车商品数据。
+            if (this.cartGoodsInfo) {
+                //购物车商品存在 
+                //str用来保存将要面页面显示的html结构，用于展示购物车商品信息
+                var str = "";
+
+                for (var i = 0; i < obj1.length; i++) {
+                    for (var j = 0; j < this.cartGoodsInfo.length; j++) {
+                        //根据购物车信息中商品的编号bid从所有商品数据中获取需要的商品数据。
+                        if (obj1[i].bid == this.cartGoodsInfo[j].bid) {
+
+                            str += `
+								<ul class="title">
+									<li>
+										<input class="checkOne" type="checkbox"/>
+										<input class="goodBid" type="hidden" value="${this.cartGoodsInfo[j].bid}"/>
+									</li>
+									<li>
+										<p><img src="${obj1[i].src1}"/></p>
+									</li>
+									<li><span class="goodCount">${this.cartGoodsInfo[j].count}</span></li>
+									<li><span class="goodPrice">￥${obj1[i].price}</span></li>
+									<li><input class="del" type="button" value="-"/>&nbsp;|&nbsp;<input class="add" type="button" value="+"/></li>
+									<li><span class="goodTotalPrice">￥${Number(this.cartGoodsInfo[j].count) * Number(obj1[i].price)}</span></li>
+								</ul>
+							`;
+                        }
+                    }
+                }
+                //把商品数据显示在页面中
+                this.carts.html(str);
+            }
+			/*
+			 * 只有把商品数据完全显示在页面中，才能实现购物车的增删改。
+			 * 否则无法操作。
+			 */
+            //实现购物车的增删改。
+            new SelectCart(this);
+        }
+    }
+    class SelectCart {
+        constructor(obj) {
+            this.goods = obj.goods;//所有商品
+            this.userName = obj.userName;//当前用户名
+            this.checkAll = obj.checkAll;//选择所有
+            this.carts = obj.carts;//购物车商品信息容器
+            this.deslectionBtn = obj.deslectionBtn;//取消选择按钮
+            this.totalCount = obj.totalCount;//显示所选商品总条数按钮
+            this.totalPrice = obj.totalPrice;//显示所选商品总价格按钮
+            this.delCartGoods = obj.delCartGoods;//删除所选商品按钮
+            this.selectAll();//实现选择所有功能
+            this.selectOne();//单个选择功能。
+            this.deselection();//取消选择
+            this.updateCart(1, ".add");//购物车添加一条商品信息
+            this.updateCart(-1, ".del");//购物车删除一条商品信息
+            this.deletCartGoodsInfo();//删除所有选中商品
+            //创建对象， 实现购物车计算功能
+            this.computeCart = new ComputeCart(this.userName, this.goods);//购物车计算功能实现
+        };
+        //选择所有。
+        selectAll() {
+            //选择所有的表示单个商品的复选框
+            var checkOne = this.carts.find(".checkOne");
+            //保存当前对象
+            var _this = this;
+            //全选按钮的单击事件，实现选择所有功能。
+            this.checkAll.click(function () {
+                //当单击全选按钮，则表示单个商品的复选框全部选中或取消选中
+                checkOne.prop("checked", $(this).prop("checked"));
+                //全部选中后，此时的全选按钮应为禁用状态。
+                $(this).prop("disabled", true);
+                //只要点击了全选按钮就可以点击取消选择按钮
+                _this.deslectionBtn.prop("checked", false).prop("disabled", false);
+
+                //计算功能实现
+                //查找到显示商品条数的元素标签
+                var goodsCount = _this.carts.find(".goodCount");
+                //查找到保存商品编号bid的隐藏域。
+                var goodBid = _this.carts.find(".goodBid");
+                //用于计算选中商品的总条数
+                var totalCount = 0;
+                //用于计算选中商品的总金额。
+                var totalPrice = 0;
+                //遍历所有查找到的显示商品条数的元素标签，目的是为了计算商品的总条数和总金额
+                for (var i = 0; i < goodsCount.length; i++) {
+                    //保存当前商品编号
+                    _this.computeCart.setBid(goodBid.eq(i).val());
+                    //保存当前商品条数
+                    _this.computeCart.setGoodCount();
+                    //保存当前商品单价
+                    _this.computeCart.setGoodPrice();
+                    //计算所有商品总条数
+                    totalCount += _this.computeCart.count;
+                    //计算所有商品总价。
+                    totalPrice += _this.computeCart.count * _this.computeCart.price;
+                }
+                //在页面中显示商品总条数
+                _this.totalCount.html(totalCount);
+                //在页面中显示商品总价。
+                _this.totalPrice.html(totalPrice);
+            });
+        };
+        //选择单个。
+        selectOne() {
+            //选择所有的表示单个商品的复选框
+            var checkOne = this.carts.find(".checkOne");
+            //保存当前对象
+            var _this = this;
+            //点击单个商品的复选框
+            checkOne.click(function () {
+                //判断是否有没被选中的商品，true表示所有的都被选中了，false表示最少有一个没被选中
+                var flag = true;
+                //判断是否有商品是被选中的，false表示所有的都没有被选中，true表示最少有一个是选中的。
+                var hasChecked = false;
+                for (var i = 0; i < checkOne.length; i++) {
+                    if (!checkOne.eq(i).prop("checked")) {
+                        flag = false;//最少有一个没被选中
+                    } else {
+                        hasChecked = true;//最少有一个是选中的
+                    }
+                }
+                if (!flag) {//如果有一个没被选中
+                    //全选按钮可以点击了，状态设置为未选中状态。
+                    _this.checkAll.prop("checked", false).prop("disabled", false);
+                } else {//所有的都被选中了
+                    //全选按钮禁止点击，状态设置为选中状态。
+                    _this.checkAll.prop("checked", true).prop("disabled", true);
+                }
+                if (hasChecked) {//只要有一个被选中，就可以点击取消选择按钮
+                    //取消选择按钮可以点击了，状态设置为未选中状态。
+                    _this.deslectionBtn.prop("checked", false).prop("disabled", false);
+                } else {//所有商品都未选中，取消选择按钮则无法点击
+                    //取消选择按钮禁止点击，状态设置为选中状态。
+                    _this.deslectionBtn.prop("checked", true).prop("disabled", true);
+                }
+                //计算功能实现
+                //查找到显示商品条数的元素标签
+                var goodsCount = _this.carts.find(".goodCount");
+                //查找到保存商品编号bid的隐藏域。
+                var goodBid = _this.carts.find(".goodBid");
+                //用于计算选中商品的总条数
+                var totalCount = 0;
+                //用于计算选中商品的总金额。
+                var totalPrice = 0;
+                for (var i = 0; i < checkOne.length; i++) {
+                    if (checkOne.eq(i).prop("checked")) {
+                        //保存当前商品编号
+                        _this.computeCart.setBid(goodBid.eq(i).val());
+                        //保存当前商品条数
+                        _this.computeCart.getCart();
+                        _this.computeCart.setGoodCount();
+                        //保存当前商品单价
+                        _this.computeCart.setGoodPrice();
+                        //console.log(_this.computeCart.count);
+                        //计算选中的商品总条数
+                        totalCount += _this.computeCart.count;
+                        //计算选中的商品总价。
+                        totalPrice += _this.computeCart.count * _this.computeCart.price;
+                    }
+                }
+                //在页面显示所有选中商品条数
+                _this.totalCount.html(totalCount);
+                //在页面显示所有选中商品总价
+                _this.totalPrice.html(totalPrice);
+            })
+        };
+        //取消选择。
+        deselection() {
+            var _this = this;
+            //选择所有的表示单个商品的复选框
+            var checkOne = this.carts.find(".checkOne");
+            //点击取消选择按钮
+            this.deslectionBtn.click(function () {
+                //全选按钮可以点击了，状态设置为未选中状态。
+                _this.checkAll.prop("checked", false).prop("disabled", false);
+                //所有的表示单个商品的复选框，都为未选中状态。
+                checkOne.prop("checked", false);
+                //消选择按钮此时为禁止状态，不能被再次点击。
+                $(this).prop("disabled", true);
+                //没有商品被选中，商品总条数当然为0啊
+                _this.totalCount.html(0);
+                //没有商品被选中，商品总价也必须为0啊，不用付钱了
+                _this.totalPrice.html(0);
+            });
+        };
+		/*
+		 * updateCart()方法用来实现add和del功能，点击+按钮增加1个商品，点击-按钮删除一个商品
+		 * num表示要删除或增加商品的个数
+		 * className为删除或增加商品的按钮的class名称
+		 */
+        updateCart(num, className) {
+            //初始化单个商品的复选框为null
+            var checkOne = null;
+            var _this = this;
+            //为删除或增加商品的按钮添加click事件
+            this.carts.delegate(className, "click", function () {
+                // console.log(1, num);
+                //获取当前商品编号
+
+                var bid = $(this).parent().parent().find(".goodBid").val();
+                //保存当前商品编号
+                _this.computeCart.setBid(bid);
+                //保存当前商品条数
+                _this.computeCart.getCart();
+                _this.computeCart.setGoodCount();
+                //保存当前商品单价
+                _this.computeCart.setGoodPrice();
+                //当前商品条数加1
+                _this.computeCart.updateCount(num);
+                // getCartCount();
+                // _this.computeCart.setGoodCount();
+                //当前商品条数小于0时，删除当前商品信息，删除购物车保存的当前商品信息。
+                if (_this.computeCart.count < 0) {
+                    //删除当前商品信息
+                    $(this).parent().parent().remove();
+                    //删除购物车保存的当前商品信息。
+                    _this.computeCart.delCartGood();
+					/*
+					 * 因为当商品条数小于0后，该条商品在页面被删除了，但是原来被选中的该条商品数据仍存留在
+					 * 内存中没被销毁,以下三个方法重新执行，是为了重新初始化当前页面数据。
+					 */
+                    _this.selectOne();
+                    _this.updateCart(0, ".add");
+                    _this.updateCart(0, ".del");
+                } else {
+                    //显示当前商品数据
+                    $(this).parent().parent().find(".goodCount").html(_this.computeCart.count);
+                    //计算当前商品总价
+                    $(this).parent().parent().find(".goodTotalPrice").html(_this.computeCart.count * _this.computeCart.price);
+                }
+                checkOne = _this.carts.find(".checkOne");
+                //计算所选商品总条数和总价格
+                var totalCount = 0;//总条数
+                var totalPrice = 0;//总价格
+
+                for (var i = 0; i < checkOne.length; i++) {
+                    //找到所有被选中的商品
+                    if (checkOne.eq(i).prop("checked")) {
+                        //把选中的商品条数累加
+                        totalCount += Number(_this.carts.find(".goodCount").eq(i).html());
+                        //把选中的商品价格累加
+                        totalPrice += Number(_this.carts.find(".goodTotalPrice").eq(i).html());
+                    }
+                }
+                _this.totalCount.html(totalCount);//显示总条数
+                _this.totalPrice.html(totalPrice);//显示总价格
+                //更新localstorage数据
+                _this.computeCart.setLocalstorage();
+                //更新当前数据
+                //_this.computeCart.getCart();
+                getCartCount();
+            });
+        };
+        deletCartGoodsInfo() {
+            var _this = this;
+            var checkOne = this.carts.find(".checkOne");
+            //点击删除所选商品
+            this.delCartGoods.click(function () {
+                //遍历所有选中商品
+                //alert(11)
+                for (var i = 0; i < checkOne.length; i++) {
+                    if (checkOne.eq(i).prop("checked")) {
+                        //设置选中商品的编号
+                        _this.computeCart.setBid(checkOne.eq(i).parent().parent().find(".goodBid").val());
+                        //删除已显示的选中商品。
+                        checkOne.eq(i).parent().parent().remove();
+                        //删除选中的购物车商品。
+                        _this.computeCart.delCartGood();
+                    }
+                }
+                _this.totalCount.html(0);//总条数置为0
+                _this.totalPrice.html(0);//总价格置为0
+
+				/*
+				 * 因为当选中商品被删除后，但是原来被选中的这些商品数据仍存留在
+				 * 内存中没被销毁,以下三个方法重新执行，是为了重新初始化当前页面数据。
+				 */
+                _this.selectOne();
+                _this.updateCart(0, ".add");
+                _this.updateCart(0, ".del");
+            });
+        }
+    }
+    class ComputeCart {
+        constructor(userName, goods) {
+            this.goods = goods;//所有商品
+            this.bid = "";//商品编号 
+            this.userName = userName;//用户名
+            this.cartArr = null;//保存购物车信息
+            this.count = 0;//购物车的单个商品数量
+            this.price = 0;//购物车的单个商品单价
+            this.getCart();//获取购物车商品信息。
+        };
+        //获取购物车商品信息
+        getCart() {
+            if (localStorage.getItem(this.userName + "Goods")) {
+
+                var cartStr = localStorage.getItem(this.userName + "Goods");
+
+                //将购物车中的商品信息暂时保存下来。
+                this.cartArr = JSON.parse(cartStr);
+                // console.log(this.cartArr)
+            } else {
+                this.cartArr = null;
+            }
+        };
+        //设置当前商品编号，表示要操作的是当前商品。
+        setBid(bid) {
+            //将当前商品的编号保存下来。
+            this.bid = bid;
+        }
+        //根据当前商品编号设置商品条数
+        setGoodCount() {
+
+            if (this.cartArr) {//如果购物车商品信息存在 ，则可以计算当前商品的条数了。
+                for (var i = 0; i < this.cartArr.length; i++) {
+
+                    if (this.cartArr[i].bid == this.bid) {
+                        //保存当前商品的条数
+                        this.count = Number(this.cartArr[i].count);
+                    }
+                }
+            }
+        };
+        //根据当前商品编号设置商品单价
+        setGoodPrice() {
+            //从所有商品数据中找到对应编号的商品单价
+            for (var i = 0; i < this.goods.length; i++) {
+                if (this.goods[i].bid == this.bid) {
+                    //保存当前商品的单价
+                    this.price = this.goods[i].price;
+                }
+            }
+        };
+        //根据num更新当前商品个数
+        updateCount(num) {
+
+            //在原来商品个数的基础上更新num个当前商品。
+            this.count = this.count + num;
+            // console.log(num);
+            // console.log(this.count);
+        };
+        //根据现有的商品个数更新购物车中的商品信息。
+        setLocalstorage() {
+            var storageStr = localStorage.getItem(this.userName + "Goods");
+            var storageArr = JSON.parse(storageStr);
+            for (var i = 0; i < storageArr.length; i++) {
+                if (storageArr[i].bid == this.bid) {
+                    //因为该商品个数更新了，所有购物车里的该商品个数也要随之更新。
+                    storageArr[i].count = this.count;
+                };
+            }
+            var storageJson = JSON.stringify(storageArr);
+            //更新购物车中的商品信息。
+            localStorage.setItem(this.userName + "Goods", storageJson);
+        };
+        //删除购物车中该条商品信息。
+        delCartGood() {
+            var storageStr = localStorage.getItem(this.userName + "Goods");
+            var storageArr = JSON.parse(storageStr);
+            for (var i = 0; i < storageArr.length; i++) {
+                if (storageArr[i].bid == this.bid) {
+                    //删除整条该商品信息
+                    storageArr.splice(i, 1);
+                    //该条商品信息已经删除，无需再循环了。
+                    break;
+                };
+            }
+            var storageJson = JSON.stringify(storageArr);
+            //该条商品信息删除后，购物车中的商品信息也需要更新的。
+            localStorage.setItem(this.userName + "Goods", storageJson);
+        }
+    }
+
+    //计算购物车商品总条数
+    function getCartCount() {
+        //购物车信息存在，就可以来计算条数了
+        if (localStorage.getItem($(".welcome").html() + "Goods")) {
+
+            var cartGoods = localStorage.getItem($(".welcome").html() + "Goods");
+            var cartGoodsJson = JSON.parse(cartGoods);
+            //
+            var sum = 0;
+            for (var i = 0; i < cartGoodsJson.length; i++) {
+                sum += cartGoodsJson[i].count;
+            }
+
+            $(".shopping-num").html(sum);
+        } else {
+            return;
+        }
+    }
+
+</script>

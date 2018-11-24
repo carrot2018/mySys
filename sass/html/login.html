@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>anitoys.login</title>
+    <link rel="stylesheet" href="../../iconfont/iconfont.css">
+    <link rel="stylesheet" href="../css/base.css">
+    <link rel="stylesheet" href="../css/login.css">
+</head>
+
+<body>
+    <div id="header">
+        <div class="container">
+            <div class="logo">
+                <a href="../index.html">
+                    <img src="../../images/logo.jpg" alt="">
+                </a>
+            </div>
+        </div>
+    </div>
+    <div id="main">
+        <div class="container">
+            <div class="main-banner">
+
+            </div>
+            <div class="main-right">
+                <form action="../php/login1.php" method="post" id="form">
+                    <div class="login-header">
+                        <h5>会员登录</h5>
+                        <a href="../html/register.html">免费注册&nbsp;></a>
+                    </div>
+                    <div class="form-control">
+                        <ul>
+                            <li class="form-row">
+                                <p class="caution"></p>
+                                <span class="form-act">
+                                    <input class="account" type="text" name="uname" placeholder="用户名/邮箱地址/已验证手机号" autofocus="autofocus">
+                                    <i class="iconfont icon-denglu"></i>
+                                </span>
+                            </li>
+                            <li class="form-row">
+                                <span class="form-act">
+                                    <input class="password" name="upwd" autofocus="autofocus" type="text" placeholder="填写密码">
+                                    <i class="iconfont icon-suo"></i>
+                                </span>
+                            </li>
+                            <li class="form-row-text">
+                                <div class="auto-login">
+                                    <input type="checkbox" name="" id="check-wrap">
+                                    <label for="check-wrap">下次自动登录</label>
+                                </div>
+                                <div class="forget-or-signin">
+                                    <a href="">忘记密码？</a>
+                                </div>
+                            </li>
+                            <li class="form-row-text">
+                                <button type="submit" class="login-btn">登录</button>
+                            </li>
+                        </ul>
+                    </div>
+
+                </form>
+                <div class="another-login">其它方式登录</div>
+            </div>
+        </div>
+        <div id="footer">
+            <div class="container">
+                <p>有任何购物问题请联系我们在线客服 | 电话：021-55135395 | 工作时间：周一至周五 09:30－18:00 </p>
+                <p>©2017 阿尼托 上海索罗游信息技术有限公司 anitoys.com 版权所有</p>
+                <p>沪ICP备11047967号-18</p>
+            </div>
+        </div>
+</body>
+
+</html>
+<script src="../../js/jquery.min.js"></script>
+<script>
+    //获取焦点
+    $("input").focus(function () {
+        $(this).css({ "border": "1px solid skyblue", "box-shadow": "0px 0px 1px 1px skyblue" });
+    });
+    $("input").blur(function () {
+        $(this).css({ "border": "1px solid #cccccc", "box-shadow": "none" });
+    });
+
+
+    //验证是否输入账号和密码
+    var flag = false;
+    $(".login-btn").click(function () {
+        if ($(".account").val() == "") {
+            $(".caution").css("display", "block").html("请输入账号");
+            flag = false;
+        } else if ($(".password").val() == "") {
+            $(".caution").css("display", "block").html("请输入密码");
+            flag = false;
+        } else {
+            $.ajax({
+                type: "post",
+                url: "../php/login.php",
+                data: {
+                    uname: $(".account").val(),
+                    upwd: $(".password").val()
+                },
+                success: function (res) {
+                    if (res == 1) {
+                        flag = true;
+                        // window.localStorage.setItem("name", "uname");
+                        // $(location).attr('href', '../index.html');
+
+                    } else if (res == 0) {
+                        flag = false;
+                        $(".caution").css("display", "block").html("密码错误");
+                    } else {
+                        flag = false;
+                        $(".caution").css("display", "block").html("该用户名不存在");
+                    }
+                }
+            });
+        }
+
+    });
+
+
+
+    $("input").keyup(function () {
+        if ($(this).val() != "") {
+            $(".caution").css("display", "none");
+        }
+    });
+
+    $("form").submit(function () {
+        if (flag) {
+            return true;
+        } else {
+            return false;
+        }
+    });
+
+</script>

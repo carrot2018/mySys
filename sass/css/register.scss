@@ -1,0 +1,183 @@
+
+body{
+    background: white;
+    font-size: 75%;
+    #header{
+    height: 93px;
+        .container{
+            .logo{
+                padding-top: 24px;
+            }
+        }
+    }
+    #main{
+        height: 450px;
+        .container{
+            .error{
+                height: 80px;
+                width: 300px;
+                line-height: 80px;
+                text-align: center;
+                font-size: 16px;
+                border: 1px solid #eeb5b0;
+                color: #D23F33;
+                background-color: #fbf0ef;
+                position: fixed;
+                bottom: 50%;
+                right: 42%;
+                display: none;
+            }
+            .main-banner{
+                margin-left: 10px;
+                width:665px;
+                height: 365px;
+                background-size: cover;
+                background-position: center;
+                background-image: url(../../images/login.jpg);
+                float: left;
+            }
+            .main-right{
+                height: 100%;
+                margin-left: 10px;
+                width: 440px;
+
+                float: left;
+                .register-form{
+                    h1{
+                        padding-left: 60px;
+                        color: #333;
+                        font-weight: 400;
+                        font-size: 22px; 
+                        margin-bottom: 30px;
+                    }
+                    form{
+                        ul{ 
+
+                            .from-row{
+                                position: relative;
+                                min-height: 36px;
+                                margin-bottom: 10px;
+                                display: inline-block;
+                                clear: both;
+                                float: left;
+                                .caution{
+                                    width: 300px;
+                                    left: 120px;
+                                    position: absolute;
+                                    bottom: 38px;
+                                    height: 30px;
+                                    line-height: 30px;
+                                    padding-left: 20px;
+                                    border-radius: 3px;
+                                    border: 1px solid #eeb5b0;
+                                    color: #D23F33;
+                                    background-color: #fbf0ef;
+                                    display: none;
+                                }
+                                label{
+                                    float: left;
+                                    width: 108px;
+                                    min-height: 36px;
+                                    line-height: 36px;
+                                    text-align: right;
+                                    font-size: 10px;
+                                    i{
+                                        margin-right: 5px;
+                                        color: #EF4521;
+                                    }
+                                }
+                                .from-act{
+                                    width: 300px;
+                                    float: left;
+                                    margin-left: 1em;
+                                    line-height: 34px;
+                                    position: relative;
+                                    display: block;
+                                   .from-label{
+                                        width: 300px;
+                                        height: 36px;
+                                        line-height: 36px;
+                                        padding-right: 30px;
+                                        padding: 2px;
+                                        border: 1px solid #cccccc;
+                                        background-color: white;
+                                        border-radius: 3px;
+                                        font-size: 12px;
+                                    }
+                                    #v-code{
+                                        width: 134px;
+                                    }
+                                    i{
+                                        height:36px;
+                                        width: 36px;
+                                        position: absolute;
+                                        text-align: center;
+                                        line-height: 36px;
+                                        top: 0;
+                                        right: 0;
+                                        font-size: 18px;
+                                        color: #999999;
+                                    }
+                                    .password-check{
+                                        overflow: hidden;
+                                        display: inline-block;
+                                        vertical-align: middle;
+                                        line-height: 18px;
+                                        color: #666666;
+                                        float: right;
+                                        font-size: 12px;
+                                        margin-top: 10px;
+                                        p{
+                                            display: inline-block;
+                                        }
+                                        em{
+                                            margin-left: 1px;
+                                            padding: 0 10px;
+                                            background-color: #CCCCCC;
+                                            color: #FFFFFF;
+                                            display: inline-block;
+                                            float: right;
+                                        }
+                                    }
+                                }
+                                .change{
+                                    cursor: pointer;
+                                    p{
+                                        display: inline;
+                                    }
+                                    a{
+                                        color: #0563C3;
+                                    }
+                                }
+                                .consent{
+                                    float: none;
+                                    a{
+                                        color: #0563C3;
+                                    }
+                                }
+                                .submit{
+                                    margin-right: 20px;
+                                    background: #EF4521;
+                                    color: white;
+                                    height: 34px;
+                                    width: 100%;
+                                    border-radius: 3px;
+                                    cursor: pointer;
+                                    line-height: 34px;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+    #footer{
+        color: #666;
+        text-align: center;
+        p{
+            height: 24px;
+            line-height: 24px;
+        }
+    }
+}

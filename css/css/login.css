@@ -1,0 +1,108 @@
+body {
+  background: white;
+  font-size: 75%; }
+  body input {
+    padding: 2px;
+    border: 1px solid #cccccc;
+    background-color: white;
+    border-radius: 3px; }
+  body #header {
+    height: 93px; }
+    body #header .container .logo {
+      padding-top: 24px; }
+  body #main {
+    height: 450px; }
+    body #main .container .main-banner {
+      margin-left: 10px;
+      width: 665px;
+      height: 365px;
+      background-size: cover;
+      background-position: center;
+      background-image: url(../../images/login.jpg);
+      float: left; }
+    body #main .container .main-right {
+      width: 440px;
+      padding: 15px 0;
+      background: white;
+      border-radius: 5px;
+      font-size: 12px;
+      float: left; }
+      body #main .container .main-right .login-header {
+        display: block;
+        clear: both;
+        height: 45px;
+        padding: 10px 30px 5px 30px; }
+        body #main .container .main-right .login-header h5 {
+          float: left;
+          font-size: 18px; }
+        body #main .container .main-right .login-header a {
+          line-height: 30px;
+          float: right; }
+      body #main .container .main-right .form-control {
+        padding-top: 40px;
+        margin: 0 30px;
+        position: relative; }
+        body #main .container .main-right .form-control ul .form-row {
+          height: 55px;
+          position: relative; }
+          body #main .container .main-right .form-control ul .form-row .caution {
+            width: 380px;
+            position: absolute;
+            bottom: 70px;
+            height: 30px;
+            line-height: 30px;
+            padding-left: 20px;
+            border-radius: 3px;
+            border: 1px solid #eeb5b0;
+            color: #D23F33;
+            background-color: #fbf0ef;
+            display: none; }
+          body #main .container .main-right .form-control ul .form-row .form-act {
+            display: block;
+            height: 36px;
+            line-height: 36px;
+            position: relative; }
+            body #main .container .main-right .form-control ul .form-row .form-act input {
+              width: 380px;
+              height: 34px;
+              display: block;
+              padding-right: 36px;
+              font-size: 12px; }
+            body #main .container .main-right .form-control ul .form-row .form-act i {
+              height: 36px;
+              width: 36px;
+              position: absolute;
+              text-align: center;
+              line-height: 36px;
+              top: 0;
+              right: 0;
+              font-size: 18px;
+              color: #999999; }
+        body #main .container .main-right .form-control ul .form-row-text {
+          height: 36px; }
+          body #main .container .main-right .form-control ul .form-row-text .auto-login {
+            float: left; }
+          body #main .container .main-right .form-control ul .form-row-text .forget-or-signin {
+            float: right; }
+          body #main .container .main-right .form-control ul .form-row-text .login-btn {
+            height: 36px;
+            display: block;
+            width: 100%;
+            border-radius: 3px;
+            line-height: 36px;
+            background: #ff6600;
+            color: white;
+            cursor: pointer; }
+    body #main .container .another-login {
+      padding: 30px 30px 0 30px;
+      text-align: center;
+      color: #999;
+      margin-bottom: 20px; }
+  body #footer {
+    color: #666;
+    text-align: center; }
+    body #footer p {
+      height: 24px;
+      line-height: 24px; }
+
+/*# sourceMappingURL=login.css.map */

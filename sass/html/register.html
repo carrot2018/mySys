@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>register</title>
+    <link rel="stylesheet" href="../../iconfont/iconfont.css">
+    <link rel="stylesheet" href="../css/base.css">
+    <link rel="stylesheet" href="../css/register.css">
+
+</head>
+
+<body>
+    <div id="header">
+        <div class="container">
+            <div class="logo">
+                <a href="../index.html">
+                    <img src="../../images/logo.jpg" alt="">
+                </a>
+            </div>
+        </div>
+    </div>
+    <div id="main">
+        <div class="container">
+            <div class="error"></div>
+            <div class="main-banner">
+
+            </div>
+            <div class="main-right">
+                <div class="register-form">
+                    <h1>用户注册</h1>
+                    <form id="from" action="../php/register.php" method="POST">
+                        <ul>
+
+                            <li class="from-row">
+                                <p class="caution"></p>
+                                <label for="account">
+                                    <i>*</i>登录名</label>
+                                <span class="from-act">
+                                    <input type="text" id="account" class="from-label" name="uname" placeholder="用户名/邮箱/手机号，最少4个字符">
+                                    <i class="iconfont icon-denglu"></i>
+                                </span>
+
+                            </li>
+                            <li class="from-row">
+                                <label for="pwd">
+                                    <i>*</i>设置密码</label>
+                                <span class="from-act">
+                                    <input type="password" id="pwd" class="from-label" name="upwd" placeholder="6-20个字符">
+                                    <i class="iconfont icon-suo"></i>
+                                    <div class="password-check">
+                                        <p>安全强度</p>
+                                        <span>
+                                            <em class="strong">强</em>
+                                            <em class="medium">中</em>
+                                            <em class="weak">弱</em>
+                                        </span>
+                                    </div>
+                                </span>
+                                <div class="error"></div>
+                            </li>
+                            <li class="from-row">
+                                <label for="pwd-second">
+                                    <i>*</i>确认密码</label>
+                                <span class="from-act">
+                                    <input type="text" id="pwd-second" class="from-label" placeholder="再次填写密码">
+                                    <i class="iconfont icon-suo"></i>
+                                </span>
+                                <div class="error"></div>
+                            </li>
+                            <li class="from-row">
+                                <label for="v-code">
+                                    <i>*</i>验证码</label>
+                                <span class="from-act">
+                                    <input type="text" id="v-code" class="from-label">
+                                    <div class="change">
+                                        <p>看不清？</p>
+                                        <a href="">换一张</a>
+                                    </div>
+                                </span>
+                            </li>
+                            <li class="from-row">
+                                <label for=""></label>
+                                <span class="from-act">
+                                    <input type="checkbox" name="" id="consent">
+                                    <label for="consent" class="consent">
+                                        我已阅读并同意
+                                        <a href="">《会员注册协议》</a>
+                                    </label>
+                                </span>
+                            </li>
+                            <li class="from-row">
+                                <label for=""></label>
+                                <span class="from-act">
+                                    <button class="submit" type="submit">立即注册</button>
+                                </span>
+                            </li>
+                            <li class="from-row">
+                                <label for=""></label>
+                                <span class="from-act">
+                                    <a href="../html/login.html">已有账号?去登录</a>
+                                </span>
+                            </li>
+                        </ul>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="footer">
+        <div class="container">
+            <p>有任何购物问题请联系我们在线客服 | 电话：021-55135395 | 工作时间：周一至周五 09:30－18:00 </p>
+            <p>©2017 阿尼托 上海索罗游信息技术有限公司 anitoys.com 版权所有</p>
+            <p>沪ICP备11047967号-18</p>
+        </div>
+    </div>
+</body>
+
+</html>
+<script src="../../js/jquery.min.js"></script>
+<script>
+    $("input").focus(function () {
+        $(this).css({ "border": "1px solid skyblue", "box-shadow": "0px 0px 1px 1px skyblue" });
+    });
+    $("input").blur(function () {
+        $(this).css({ "border": "1px solid #cccccc", "box-shadow": "none" });
+    });
+
+    var flag = false;
+    // $("#account").blur(function () {
+
+    // });
+
+
+
+    //账号验证--------------------------------
+    var flag0 = false;
+    $("#account").blur(function () {
+        var str = $(this).val();
+        var rel = /^[a-zA-Z][a-zA-Z0-9_]{5,19}$/
+        if (!rel.test(str)) {
+            $(".caution").css("display", "block").html("请输入6-20的字母数字或下划线（首位为字母）");
+            flag0 = false;
+        } else {
+            $(".caution").css("display", "none");
+            $.ajax({
+                type: "get",
+                url: "../php/usernameCheck.php",
+                data: {
+                    uname: $(this).val()
+                },
+                success: function (res) {
+                    if (res == 1) {
+                        flag = false;
+                        $(".caution").css("display", "block").html("用户名已存在，请重新输入");
+                    } else {
+                        flag = true;
+                        $(".caution").css("display", "block").html("可用").delay(2000).fadeOut(200);
+                    }
+                }
+            });
+            flag0 = true;
+        }
+        return flag0;
+    });
+    //密码验证----------------------------------
+    var flag1 = false;
+    $("#pwd").blur(function () {
+
+        var str = $(this).val();
+        var rel = /^\S{6,20}$/;
+        if ($("#pwd").val() == "") {
+            if ($("#account").val() == "") {
+                $(".caution").css("display", "block").html("请输入账号和密码");
+                flag1 = false;
+            } else {
+                $(".caution").css("display", "block").html("请输入密码");
+                flag1 = false;
+            }
+
+        } else {
+            if (!rel.test(str)) {
+                $(".caution").css("display", "block").html("含非法字符或长度不够，请重新输入密码");
+                flag1 = false;
+            }
+            else {
+                $(".caution").css("display", "none");
+                flag1 = true;
+            }
+        }
+        return flag1;
+    });
+    var flag2 = false;
+    $("#pwd").keyup(function () {
+        $(".caution").css("display", "none");
+
+        var rel = /^\S{6,20}$/;
+        var rel1 = /^\S+$/
+        var str = $(this).val();
+        if (rel.test(str)) {
+            $(".weak").css({ background: "#e22335" });
+            if (checkPass()) {
+                $(".medium").css({ background: "#ff8135" });
+                if (str.length > 11) {
+                    $(".strong").css({ background: "#8AB65D" });
+                } else {
+                    $(".strong").css({ background: "#CCCCCC" });
+                }
+            } else {
+                $(".medium").css({ background: "#CCCCCC" });
+            }
+            flag2 = true;
+        } else {
+            $(".weak").css({ background: "#CCCCCC" });
+            flag2 = false;
+        }
+        return flag2;
+    });
+    var pwd = document.getElementById("pwd");
+    function checkPass() {
+        if (pwd.value.search(/[A-Z]/) != -1 && pwd.value.search(/[a-z]/) != -1) {
+            return true;
+        } else if (pwd.value.search(/[A-Z]/) != -1 && pwd.value.search(/[0-9]/) != -1) {
+            return true;
+        } else if (pwd.value.search(/[a-z]/) != -1 && pwd.value.search(/[0-9]/) != -1) {
+            return true;
+        } else if (pwd.value.search(/[a-z]/) != -1 && pwd.value.search(/[^0-9a-zA-Z\s]/) != -1) {
+            return true;
+        } else if (pwd.value.search(/[A-Z]/) != -1 && pwd.value.search(/[^0-9a-zA-Z\s]/) != -1) {
+            return true;
+        } else if (pwd.value.search(/[0-9]/) != -1 && pwd.value.search(/[^0-9a-zA-Z\s]/) != -1) {
+            return true;
+        } else {
+            return false;
+        }
+    };
+    //确认密码验证
+    var flag3 = false;
+    $("#pwd-second").blur(function () {
+
+        if ($(this).val() != $("#pwd").val()) {
+            $(".caution").css("display", "block").html("密码输入有误");
+            flag3 = false;
+        } else {
+            flag3 = true;
+        }
+        return flag3;
+    });
+
+    // $(".submit").click(function () {
+    //         if ($("#account").val() == "") {
+    //             $(".error").html("请输入需注册账号").stop().show().delay(2000).fadeOut().delay(1000);
+    //             $("form").submit(function () {
+    //                 return false;
+    //             });
+    //         } else if ($("#pwd").val() == "") {
+    //             $(".error").html("请输入密码").stop().show().delay(2000).fadeOut().delay(1000);
+    //             $("form").submit(function () {
+    //                 return false;
+    //             });
+    //         }else{
+
+    //         }
+
+    //     });
+    $("form").submit(function () {
+        console.log(flag, flag1, flag2, flag3);
+        if (flag && flag0 && flag1 && flag2 && flag3) {
+            return true;
+        } else {
+            return false;
+        }
+    });
+
+
+</script>

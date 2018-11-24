@@ -1,0 +1,137 @@
+body{
+    background: white;
+    font-size: 75%;
+    input{
+        padding: 2px;
+        border: 1px solid #cccccc;
+        background-color: white;
+        border-radius: 3px;
+    }
+    #header{
+    height: 93px;
+        .container{
+            .logo{
+                padding-top: 24px;
+            }
+        }
+    }
+    #main{
+        height: 450px;
+        .container{
+            
+            .main-banner{
+                margin-left: 10px;
+                width:665px;
+                height: 365px;
+                background-size: cover;
+                background-position: center;
+                background-image: url(../../images/login.jpg);
+                float: left;
+            }
+            .main-right{
+                width: 440px;
+                padding: 15px 0;
+                background: white;
+                border-radius: 5px;
+                font-size: 12px;
+                float: left;
+                .login-header{
+                    display: block;
+                    clear: both;
+                    height: 45px;
+                    padding:10px 30px 5px 30px;
+                    h5{
+                        float: left;
+                        
+                        font-size: 18px;
+                    }
+                    a{
+                        line-height: 30px;
+                        float: right;
+                    }
+                }
+                .form-control{
+                    padding-top: 40px;
+                    margin: 0 30px;
+                    position: relative;
+                    ul{
+                        .form-row{
+                            height: 55px;
+                            position: relative;
+                            .caution{
+                                width: 380px;
+                                position: absolute;
+                                bottom: 70px;
+                                height: 30px;
+                                line-height: 30px;
+                                padding-left: 20px;
+                                border-radius: 3px;
+                                border: 1px solid #eeb5b0;
+                                color: #D23F33;
+                                background-color: #fbf0ef;
+                                display: none;
+                            }
+                            .form-act{
+                                display: block;
+                                height: 36px;
+                                line-height: 36px;
+                                position: relative;
+                                input{
+                                    width: 380px;
+                                    height: 34px;
+                                    display: block;
+                                    padding-right: 36px;
+                                    font-size: 12px;
+                                }
+                                i{
+                                    height:36px;
+                                    width: 36px;
+                                    position: absolute;
+                                    text-align: center;
+                                    line-height: 36px;
+                                    top: 0;
+                                    right: 0;
+                                    font-size: 18px;
+                                    color: #999999;
+                                }
+                            }
+                        }
+                        .form-row-text{
+                            height: 36px;
+                            .auto-login{
+                                float: left;
+                            }
+                            .forget-or-signin{
+                                float: right;
+                            }
+                            .login-btn{
+                                height: 36px;
+                                display: block;
+                                width: 100%;
+                                border-radius: 3px;
+                                line-height: 36px;
+                                background: #ff6600;
+                                color: white;
+                                cursor: pointer;
+                            } 
+                        }
+                    }
+                }
+            }
+            .another-login{
+                padding: 30px 30px 0 30px;
+                text-align: center;
+                color: #999;
+                margin-bottom: 20px;
+            }
+        }
+    }
+    #footer{
+        color: #666;
+        text-align: center;
+        p{
+            height: 24px;
+            line-height: 24px;
+        }
+    }
+}
